@@ -7,7 +7,11 @@
 
   --text-primary: #e4e7ee;
   --text-secondary: #a6adbd;
-  --text-muted: #6b7280;
+  /* Lightened from #6b7280 (3.81:1 on --background-hex, 3.47:1 on
+     --card-bg) — failed WCAG AA's 4.5:1 minimum for normal text. Now
+     ~5.3:1 / ~4.85:1. Found via the Speakers page (#1) a11y audit;
+     --text-muted is a shared token so this fixes every existing user too. */
+  --text-muted: #838a99;
 
   --accent-hex: #7c5cff;
   --accent-muted: #a78bfa;
@@ -28,7 +32,9 @@
 
   --text-primary: #1a1d29;
   --text-secondary: #4b5266;
-  --text-muted: #8b92a3;
+  /* Darkened from #8b92a3 (2.93:1 on --background-hex) — see the dark-theme
+     note above. Now ~5.43:1. */
+  --text-muted: #5f6675;
 
   --accent-hex: #6d4aff;
 }
